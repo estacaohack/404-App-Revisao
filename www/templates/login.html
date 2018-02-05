@@ -1,0 +1,26 @@
+<ion-view view-title="Login">
+  <ion-content class="padding">
+
+      <img class="full-image" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png">
+
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Login</span>
+          <input type="text" ng-model="login">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Senha</span>
+          <input type="password" ng-model="senha">
+        </label>
+      </div>
+
+      <p ng-show="erro == true">Login e/ou senha inválidos</p>
+
+      <button class="button button-block button-positive" ng-click="entrar(login, senha)">
+        Entrar
+      </button>
+
+
+
+  </ion-content>
+</ion-view>

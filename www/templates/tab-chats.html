@@ -1,16 +1,24 @@
 <ion-view view-title="Chats">
   <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
 
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
-      </ion-item>
-    </ion-list>
+      <div class="list">
+
+          <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+              <input type="text" placeholder="Como está hj?" ng-model="post">
+            </label>
+            <button class="button button-small" ng-click="postar(post)">
+              Postar
+            </button>
+          </div>
+
+    </div>
+
+    <div class="item item-avatar" ng-repeat="st in usuarioLogado.status">
+        <img src="{{ usuarioLogado.img }}">
+        <h2>{{ usuarioLogado.nome }}</h2>
+        <p>{{ st.p }}</p>
+    </div>
+
   </ion-content>
 </ion-view>
